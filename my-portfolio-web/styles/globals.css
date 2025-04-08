@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --background: #1E1E2E;
+  --background_2: #1E1E21;
+  --main_text: #EDEDF4;
+  --second_text: #A6A6D2;    /* Color de texto principal */
+  --secundary_color:#3B82F6;
+  --highlighting_color:#FF3F81;
+  --highlighting_color_2:#FDC82F;
+
+}
+
+/*Clases custom */
+@layer utilities {
+  .bg-custom {
+    background-color: #3490dc; /* Un color personalizado */
+  }
+
+  .text-custom {
+    color: #ff6347; /* Otro color personalizado */
+  }
+
+  .btn-custom {
+    @apply px-4 py-2 bg-custom text-white rounded-lg shadow-lg;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+}
+
+/* Aplicar Poppins para los encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Alternar entre las fuentes */
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
