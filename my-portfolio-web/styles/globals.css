@@ -1,37 +1,49 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
-
 :root {
   --background: #1E1E2E;
-  --background_2: #1E1E21;
-  --main_text: #EDEDF4;
-  --second_text: #A6A6D2;    /* Color de texto principal */
-  --secundary_color:#3B82F6;
-  --highlighting_color:#FF3F81;
-  --highlighting_color_2:#FDC82F;
+  --background-2: #1E1E21;
+  --main-text: #EDEDF4;
+  --second-text: #A6A6D2;    /* Color de texto principal */
+  --secundary-color:#3B82F6;
+  --highlighting-color:#FF3F81;
+  --highlighting-color-2:#FDC82F;
 
 }
+
+
+@theme {
+  --color-background: #1E1E2E;
+  --color-background-2: #1E1E21;
+
+  --color-main-text: #EDEDF4;
+  --color-second-text: #A6A6D2;
+
+  --color-primary: #3B82F6;
+  --color-accent: #FF3F81;
+  --color-accent-2: #FDC82F;
+}
+
 
 /*Clases custom */
 @layer utilities {
-  .bg-custom {
-    background-color: #3490dc; /* Un color personalizado */
+/* Ejemplo de uso de crear la clase llamada typography
+ .typography {
+    p {
+      font-size: var(--text-base);
+      color: var(--color-gray-700);
+    }
+    h1 {
+      font-size: var(--text-2xl--line-height);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
   }
-
-  .text-custom {
-    color: #ff6347; /* Otro color personalizado */
-  }
-
-  .btn-custom {
-    @apply px-4 py-2 bg-custom text-white rounded-lg shadow-lg;
-  }
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*/
 }
 
 body {
