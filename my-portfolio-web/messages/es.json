@@ -1,6 +1,18 @@
 {
   "HomePage": {
-    "title": "HOLA",
-    "about": "vamosss"
+    "title": "¡Bienvenido!",
+    "about": "“Soy Néstor Álvarez, programador apasionado por la tecnología, el arte y la creatividad.”",
+    "what_want" : "¿Que quieres saber?",
+    "about_desc": "Descubrir cosas sobre mí, como habilidades técnicas y titulos o cursos realizados",
+    "projects_desc": "Proyectos realizados en individual o conjunto, que estan en progreso o en curso",
+    "experience_desc": "Visualizar mi experiencia profesional",
+    "contact_desc": "Contactar conmigo por formulario o redes sociales"
+  },
+  "Common":{
+    "about_me" : "Sobre mí",
+    "projects" : "Proyectos",
+    "experience" : "Experiencia",
+    "contact" : "Contacto",
+    "languages" : "Idiomas"
   }
 }
