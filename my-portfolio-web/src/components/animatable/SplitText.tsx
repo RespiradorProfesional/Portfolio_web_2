@@ -52,8 +52,8 @@ function Stylesheet() {
     <style>{`
       .container {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        align-items: left;
         width: 100%;
         text-align: left;
         visibility: hidden;
