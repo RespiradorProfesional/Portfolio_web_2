@@ -8,6 +8,10 @@
     "experience_desc": "Visualizar mi experiencia profesional",
     "contact_desc": "Contactar conmigo por formulario o redes sociales"
   },
+  "AboutPage":{
+    "description": "¡Hola! soy un desarrollador apasionado por la creación de aplicaciones web y móviles. Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente.", 
+    "description_2": "En esta seccion encontrarás más detalles sobre mis proyectos y mi experiencia."
+  },
   "Common":{
     "about_me" : "Sobre mí",
     "projects" : "Proyectos",

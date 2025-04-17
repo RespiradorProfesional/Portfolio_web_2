@@ -4,7 +4,7 @@ import {getTranslations} from 'next-intl/server';
 import '../../../styles/animations.css';
 import SplitText from '@/src/components/animatable/SplitText';
 import LanguageBox from '@/src/components/LanguageBox';
-import Button_nav from '@/src/components/HomePage/Button_nav';
+import Button_nav from '@/src/components/HomePage/ButtonNav';
 
 export default async function HomePage() {
 
@@ -35,10 +35,10 @@ export default async function HomePage() {
       <div className="bg-gradient-to-t from-background-2 to-transparent h-48 w-full"></div>
       <div className="bg-background-2 flex flex-col w-full items-center justify-center">
         <h2 className="text-3xl md:text-5xl my-10 text-main-text">{t("what_want")}</h2>
-        <Button_nav link={'hola'} title={tc("about_me")} description={t("about_desc")}/>
-        <Button_nav link={'hola'} title={tc("about_me")} description={t("about_desc")}/>
-        <Button_nav link={'hola'} title={tc("about_me")} description={t("about_desc")}/>
-        <Button_nav link={'hola'} title={tc("about_me")} description={t("about_desc")}/>
+        <Button_nav slug={'about'} title={tc("about_me")} description={t("about_desc")}/>
+        <Button_nav slug={'hola'} title={tc("about_me")} description={t("about_desc")}/>
+        <Button_nav slug={'hola'} title={tc("about_me")} description={t("about_desc")}/>
+        <Button_nav slug={'hola'} title={tc("about_me")} description={t("about_desc")}/>
       </div>
     </div>
   );
