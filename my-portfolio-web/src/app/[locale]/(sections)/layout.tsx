@@ -1,4 +1,4 @@
-// app/(with-topbar)/layout.tsx
+
 import Topbar from "@/src/components/common/Topbar";
 import React from "react";
 import {getTranslations} from 'next-intl/server';

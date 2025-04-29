@@ -1,12 +1,20 @@
 package com.example.portfolio_api.controller;
 
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.example.portfolio_api.model.New;
 import com.example.portfolio_api.repository.NewRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/news")
@@ -33,7 +41,7 @@ public class NewController {
     @PutMapping("/{id}")
     public New updateNew(@PathVariable Long id, @RequestBody New updatedNew) {
         return newRepository.findById(id).map(news -> {
-            news.setNombre(updatedNew.getNombre());
+            news.setName(updatedNew.getName());
             news.setDescription(updatedNew.getDescription());
             return newRepository.save(news);
         }).orElse(null);

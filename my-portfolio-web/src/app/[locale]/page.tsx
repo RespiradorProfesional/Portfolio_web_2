@@ -24,10 +24,10 @@ export default async function HomePage() {
 
         <div className="hidden xl:block z-1">
             <Image
-              src="/personal_photos/bohemio-hombre-cruzar-brazos.png" // Asegúrate de que la ruta sea correcta
+              src="/personal_photos/bohemio-hombre-cruzar-brazos.png" 
               alt="Imagen de ejemplo"
-              width={2000} // Ajusta el ancho según tus necesidades
-              height={600} // Ajusta la altura según tus necesidades
+              width={2000} 
+              height={600} 
               className="h-auto"
             />
         </div>
