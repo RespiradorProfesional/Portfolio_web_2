@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.portfolio_api.model.Technologie;
-import com.example.portfolio_api.repository.TechnologieRepository;
+import com.example.portfolio_api.model.Technology;
+import com.example.portfolio_api.service.TechnologyService;
 
 @RestController
 @RequestMapping("/api/technologies")
-public class TechnologieController {
+public class TechnologyController {
 
     @Autowired
-    private TechnologieRepository technologieRepository;
+    private TechnologyService technologyService;
 
     @GetMapping
-    public List<Technologie> getAllTechnologies() {
-        return technologieRepository.findAll();
+    public List<Technology> getAllTechnologies() {
+        return technologyService.getAllTechnologies();
     }
 }

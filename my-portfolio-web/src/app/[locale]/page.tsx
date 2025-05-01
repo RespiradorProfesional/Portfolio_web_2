@@ -4,7 +4,7 @@ import {getTranslations} from 'next-intl/server';
 import '../../../styles/animations.css';
 import SplitText from '@/src/components/animatable/SplitText';
 import LanguageBox from '@/src/components/LanguageBox';
-import Button_nav from '@/src/components/HomePage/ButtonNav';
+import Button_nav from '@/src/components/page_components/HomePage/ButtonNav';
 
 export default async function HomePage() {
 

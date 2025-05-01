@@ -21,12 +21,19 @@ public class New {
     private String name;
     private String description;
     @Column(nullable = false)
-    private LocalDate fechaCreacion;
+    private LocalDate creationDate;
+
+    public New(){}
+
+    public New(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
 
     @PrePersist
     public void prePersist() {
-        if (fechaCreacion == null) {
-            fechaCreacion = LocalDate.now();
+        if (creationDate == null) {
+            creationDate = LocalDate.now();
         }
     }
 }
