@@ -20,13 +20,11 @@ public class CourseController {
     @Autowired
     private CourseService courseService;
 
-    // Endpoint para obtener información general de los cursos
     @GetMapping
     public List<Course> getAllCourses() {
         return courseService.getAllCourses();
     }
 
-    // Endpoint para obtener información detallada de un curso por su ID
     @GetMapping("/{id}")
     public ResponseEntity<Course> getCourseById(@PathVariable Long id) {
         Optional<Course> curso = courseService.getCourseById(id);

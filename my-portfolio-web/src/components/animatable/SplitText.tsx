@@ -4,11 +4,11 @@ import { animate, stagger } from "motion";
 import { useEffect, useRef } from "react";
 
 interface SplitTextProps {
-    text: string;
-    className?: string;
-  }
+  text: string;
+  className?: string;
+}
 
-export default function SplitText({ text , className }: SplitTextProps) {
+export default function SplitText({ text, className }: SplitTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function SplitText({ text , className }: SplitTextProps) {
 
   return (
     <div className="container" ref={containerRef}>
-      <p className={` ${className || ""}`} >{words}</p>
+      <p className={` ${className || ""}`}>{words}</p>
       <Stylesheet />
     </div>
   );

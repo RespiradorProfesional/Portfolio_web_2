@@ -10,7 +10,6 @@
     }
   }
   
-  /* Aplica la animación a un elemento */
 .float {
     animation: float 2s ease-in-out infinite;
   }

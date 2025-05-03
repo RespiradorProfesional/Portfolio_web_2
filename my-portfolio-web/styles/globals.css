@@ -2,19 +2,16 @@
 
 @import "tailwindcss";
 
-
-
 :root {
   --background: #1E1E2E;
   --background-2: #1E1E21;
   --main-text: #EDEDF4;
-  --second-text: #A6A6D2;    /* Color de texto principal */
+  --second-text: #A6A6D2; 
   --secundary-color:#3B82F6;
   --highlighting-color:#FF3F81;
   --highlighting-color-2:#FDC82F;
 
 }
-
 
 @theme {
   --color-background: #1E1E2E;
@@ -26,29 +23,6 @@
   --color-primary: #3B82F6;
   --color-accent: #FF3F81;
   --color-accent-2: #FDC82F;
-}
-
-
-/*Clases custom */
-@layer utilities {
-/* Ejemplo de uso de crear la clase llamada typography
- .typography {
-    p {
-      font-size: var(--text-base);
-      color: var(--color-gray-700);
-    }
-    h1 {
-      font-size: var(--text-2xl--line-height);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-gray-950);
-    }
-    h2 {
-      font-size: var(--text-xl);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-gray-950);
-    }
-  }
-*/
 }
 
 * {
@@ -69,7 +43,6 @@ p {
   font-style: normal;
 }
 
-/* Aplicar Montserrat para los encabezados */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;

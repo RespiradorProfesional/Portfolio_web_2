@@ -1,4 +1,5 @@
 package com.example.portfolio_api.model;
+
 import java.time.LocalDate;
 
 import jakarta.persistence.Column;
@@ -23,7 +24,8 @@ public class New {
     @Column(nullable = false)
     private LocalDate creationDate;
 
-    public New(){}
+    public New() {
+    }
 
     public New(String name, String description) {
         this.name = name;
