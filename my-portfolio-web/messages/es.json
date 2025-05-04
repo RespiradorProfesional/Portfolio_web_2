@@ -10,9 +10,11 @@
   },
   "AboutPage":{
     "description": "¡Hola! soy un desarrollador apasionado por la creación de aplicaciones web y móviles. Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente.", 
-    "description_2": "En esta seccion encontrarás más detalles sobre mis proyectos y mi experiencia."
+    "description_2": "En esta seccion encontrarás más detalles sobre mis proyectos y mi experiencia.",
+    "titles_courses": "Títulos y cursos"
   },
   "Common":{
+    "home" : "Inicio",
     "about_me" : "Sobre mí",
     "projects" : "Proyectos",
     "experience" : "Experiencia",

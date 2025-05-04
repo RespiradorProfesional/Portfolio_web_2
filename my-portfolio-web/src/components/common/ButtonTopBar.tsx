@@ -14,11 +14,10 @@ const ButtonTopBar = ({ slug, title }: ButtonTopBarProps) => {
   const fullPath = `/${currentLang}/${slug}`;
 
   return (
-    <div className="group flex items-center">
+    <div className="group">
       <Link
         href={fullPath}
-        className="mx-10 my-5 cursor-pointer text-center font-semiboldtext-second-text link_topbar text-main-text
-                                        transition-colors duration-300 ease-in-out group-hover:text-accent"
+        className="mx-4 my-2 cursor-pointer text-center font-semibold text-second-text text-main-text transition-colors duration-300 ease-in-out group-hover:text-accent"
       >
         {title}
       </Link>

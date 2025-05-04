@@ -44,19 +44,19 @@ export default async function HomePage() {
           description={t("about_desc")}
         />
         <Button_nav
-          slug={"hola"}
-          title={tc("about_me")}
-          description={t("about_desc")}
+          slug={"projects"}
+          title={tc("projects")}
+          description={t("projects_desc")}
         />
         <Button_nav
-          slug={"hola"}
-          title={tc("about_me")}
-          description={t("about_desc")}
+          slug={"experience"}
+          title={tc("experience")}
+          description={t("experience_desc")}
         />
         <Button_nav
-          slug={"hola"}
-          title={tc("about_me")}
-          description={t("about_desc")}
+          slug={"contact"}
+          title={tc("contact")}
+          description={t("contact_desc")}
         />
       </div>
     </div>

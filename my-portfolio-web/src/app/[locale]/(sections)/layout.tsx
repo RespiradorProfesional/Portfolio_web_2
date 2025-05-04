@@ -8,9 +8,11 @@ export default async function WithTopbarLayout({ children }: { children: React.R
     const tc = await getTranslations('Common')
 
     const links = [
-        { slug: "about", title: tc("about") },
+        { slug: "", title: tc("home") },
+        { slug: "about", title: tc("about_me") },
         { slug: "projects", title: tc("projects") },
-        { slug: "contact", title: tc("contact") },
+        { slug: "experience", title: tc("experience") },
+        { slug: "experience", title: tc("contact") }
       ];
     
   return (

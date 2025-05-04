@@ -13,8 +13,6 @@ type Language = {
 const LanguageBox=() => {
   const router = useRouter();
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-  const [language, setLanguage] = useState<Language>({ code: "es", label: "Español" });
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const languages: Language[] = useMemo(() => [
@@ -23,6 +21,9 @@ const LanguageBox=() => {
   ], []); 
 
   const toggleDropdown = () => setOpen(prev => !prev);
+
+  const [open, setOpen] = useState(false);
+  const [language, setLanguage] = useState<Language>({ code: "es", label: "Español" });
 
   const selectLanguage = (lang: Language) => {
     setLanguage(lang); 

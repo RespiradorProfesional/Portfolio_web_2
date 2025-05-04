@@ -31,7 +31,8 @@ public class Technology {
     @Enumerated(EnumType.STRING)
     private Classification classification;
 
-    public Technology() {}
+    public Technology() {
+    }
 
     public Technology(String name, ExperienceLevel experience, Classification classification) {
         this.name = name;
