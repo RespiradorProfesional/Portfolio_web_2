@@ -12,7 +12,7 @@ export default async function HomePage() {
   return (
     <div className="w-full">
       <div
-        className="absolute top-0 left-0 w-full min-h-96 bg-cover bg-center opacity-50 z-0"
+        className="absolute top-0 left-0 w-full min-h-96 bg-cover bg-center opacity-50 z-1"
         style={{ backgroundImage: "url('background_images/header_home.png')" }}
       ></div>
       <div className="flex gap-10">

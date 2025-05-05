@@ -16,12 +16,10 @@ public class TechnologyService {
     @Autowired
     private TechnologyRepository technologyRepository;
 
-    // Método para obtener la lista de cursos con información general
     public List<Technology> getAllTechnologies() {
         return technologyRepository.findAll();
     }
 
-    // Método para obtener la información completa de un curso específico
     public Optional<Technology> getTechnologyById(Long id) {
         return technologyRepository.findById(id);
     }

@@ -18,7 +18,8 @@ export default async function WithTopbarLayout({ children }: { children: React.R
   return (
     <div>
       <Topbar links = {links} />
-      <main>{children}</main>
+      <main>
+        {children}</main>
     </div>
   );
 }

@@ -16,12 +16,10 @@ public class CourseService {
     @Autowired
     private CourseRepository courseRepository;
 
-    // Método para obtener la lista de cursos con información general
     public List<Course> getAllCourses() {
         return courseRepository.findAll();
     }
 
-    // Método para obtener la información completa de un curso específico
     public Optional<Course> getCourseById(Long id) {
         return courseRepository.findById(id);
     }

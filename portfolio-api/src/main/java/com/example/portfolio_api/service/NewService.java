@@ -14,13 +14,11 @@ public class NewService {
     
     @Autowired
     private NewRepository newRepository;
-
-    // Método para obtener la lista de cursos con información general
+    
     public List<New> getAllNews() {
         return newRepository.findAll();
     }
 
-    // Método para obtener la información completa de un curso específico
     public Optional<New> getNewById(Long id) {
         return newRepository.findById(id);
     }

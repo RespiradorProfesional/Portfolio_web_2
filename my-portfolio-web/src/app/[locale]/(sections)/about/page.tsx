@@ -5,6 +5,7 @@ import TechnologyCard from "@/src/components/page_components/AboutPage/Technolog
 import { fetchCourses, fetchTechnologies } from "@/src/services/api";
 import LinkCard from "@/src/components/common/LinkCard";
 import { Course } from "@/src/types/Course";
+import ImageBackground from "@/src/components/common/ImageBackground";
 
 export default async function AboutPage() {
   const t = await getTranslations("AboutPage");
@@ -31,25 +32,18 @@ export default async function AboutPage() {
 
   return (
     <div className="relative flex flex-col items-center ">
-      {/* Imagen de fondo */}
-      <div
-        className="absolute top-96 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1500px] h-[1500px] bg-cover bg-center opacity-50 z-0"
-        style={{
-          backgroundImage: "url('/background_images/background_ball.png')",
-        }}
-      ></div>
-      <div className="flex flex-col justify-center items-center w-full mt-40 z-10">
+      <div className="flex flex-col relative justify-center items-center w-full mt-40 pt-36 pb-28 z-10">
         <Image
           src="/personal_photos/personal_photo_example (2).jpeg"
           alt="Imagen de ejemplo"
-          width={2000}
-          height={600}
-          className="rounded-full w-40 h-40"
+          width={40}
+          height={40}
+          className="rounded-full w-40 h-40 absolute top-1"
         />
-        <p className="max-w-3xl text-main-text bg-background-2 border-4 border-background-2 rounded-lg p-4">
+        <p className="max-w-3xl text-main-text bg-background-2 border-8 border-background-2 rounded-4xl p-4">
           {t("description")}
         </p>
-        <p className="max-w-96 text-second-text bg-background-2 border-4 border-background-2 rounded-lg p-4">
+        <p className="max-w-96 text-second-text bg-background-2 border-4 border-background-2 rounded-4xl p-4 absolute bottom-11">
           {t("description_2")}
         </p>
       </div>
@@ -58,7 +52,7 @@ export default async function AboutPage() {
         {Object.entries(technologiesGrouped).map(
           ([classification, techList]) => (
             <section key={classification} className="my-8 w-full max-w-4xl">
-              <h2 className="text-2xl font-bold text-center mb-4">
+              <h2 className="text-2xl text-main-text font-bold text-center my-10">
                 {classification}
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
