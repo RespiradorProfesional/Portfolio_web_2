@@ -1,6 +1,7 @@
 import { Technology } from "@/src/types/Technology";
 import { Course } from "../types/Course";
 import { Project } from "../types/Project";
+import { Experience } from "../types/Experience";
 
 
 
@@ -25,6 +26,14 @@ export async function fetchProjects(): Promise<Project[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`);
   if (!res.ok) {
     throw new Error("Failed to fetch projects");
+  }
+  return res.json();
+}
+
+export async function fetchExperiences(): Promise<Experience[]> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/experiences`);
+  if (!res.ok) {
+    throw new Error("Failed to fetch experiences");
   }
   return res.json();
 }

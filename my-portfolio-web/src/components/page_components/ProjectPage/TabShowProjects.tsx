@@ -18,9 +18,9 @@ export default function TabShowProjects({ projects }: { projects: Project[] }) {
           <button
             className={`px-4 py-2 ${
               activeTab === "finished"
-                ? "border-b-2 border-blue-500 text-blue-500"
+                ? "border-b-2  border-accent-2 text-accent-2"
                 : "text-gray-500"
-            }`}
+            }  cursor-pointer hover:border-b-2 hover:border-accent hover:text-accent`}
             onClick={() => setActiveTab("finished")}
           >
             Terminados
@@ -28,9 +28,9 @@ export default function TabShowProjects({ projects }: { projects: Project[] }) {
           <button
             className={`px-4 py-2 ${
               activeTab === "unfinished"
-                ? "border-b-2 border-blue-500 text-blue-500"
+                ? "border-b-2 border-accent-2 text-accent-2"
                 : "text-gray-500"
-            }`}
+            }  cursor-pointer hover:border-b-2 hover:border-accent hover:text-accent `}
             onClick={() => setActiveTab("unfinished")}
           >
             Sin terminar
