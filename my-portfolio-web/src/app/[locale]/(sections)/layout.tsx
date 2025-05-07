@@ -12,7 +12,7 @@ export default async function WithTopbarLayout({ children }: { children: React.R
         { slug: "about", title: tc("about_me") },
         { slug: "projects", title: tc("projects") },
         { slug: "experience", title: tc("experience") },
-        { slug: "experience", title: tc("contact") }
+        { slug: "contact", title: tc("contact") }
       ];
     
   return (
