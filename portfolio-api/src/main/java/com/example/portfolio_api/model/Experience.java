@@ -1,8 +1,12 @@
 package com.example.portfolio_api.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
+import com.example.portfolio_api.model.TranslationModel.ExperienceTranslation;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,6 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,12 +28,10 @@ public class Experience {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
-
     // Duration in months
     private int duration;
 
-    private String description;
+    private LocalDate creationDate;
 
     @ManyToMany
     @JoinTable(
@@ -37,17 +40,24 @@ public class Experience {
             inverseJoinColumns = @JoinColumn(name = "technology_id")
     )
     private List<Technology> technologies;
-    private LocalDate creationDate;
 
-    public Experience() {}
+    @OneToMany(mappedBy = "experience", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ExperienceTranslation> translations = new ArrayList<>();
 
-    public Experience(LocalDate creationDate, String description, int duration, Long id, List<Technology> technologies, String title) {
-        this.creationDate = creationDate;
-        this.description = description;
-        this.duration = duration;
+    public Experience() {
+    }
+
+    public Experience(Long id,LocalDate creationDate, int duration,  List<Technology> technologies, List<ExperienceTranslation> translations) {
         this.id = id;
+        this.creationDate = creationDate;
+        this.duration = duration;
         this.technologies = technologies;
-        this.title = title;
+        this.translations = translations;
+    }
+
+    public void addTranslation(ExperienceTranslation translation) {
+        translation.setExperience(this);
+        translations.add(translation);
     }
 
     @PrePersist

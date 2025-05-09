@@ -9,8 +9,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.portfolio_api.dto.ExperienceDTO;
 import com.example.portfolio_api.model.Experience;
 import com.example.portfolio_api.service.ExperienceService;
 
@@ -19,16 +21,16 @@ import com.example.portfolio_api.service.ExperienceService;
 public class ExperienceController {
 
     @Autowired
-    private ExperienceService experienceService;
+    private ExperienceService service;
 
     @GetMapping
-    public List<Experience> getAllExperiences() {
-        return experienceService.getAllExperiences();
+    public List<ExperienceDTO> list(@RequestParam(defaultValue = "es") String lang) {
+        return service.getAll(lang);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Experience> getExperienceById(@PathVariable Long id) {
-        Optional<Experience> experience = experienceService.getExperienceById(id);
-        return experience.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    public ExperienceDTO one(@PathVariable Long id,
+                         @RequestParam(defaultValue = "es") String lang) {
+        return service.getExperience(id, lang);
     }
 }

@@ -1,7 +1,11 @@
 package com.example.portfolio_api.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import com.example.portfolio_api.model.TranslationModel.CourseTranslation;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,6 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,12 +26,11 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
-
     // Duration in months
     private int duration;
 
-    private String description;
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CourseTranslation> translations = new ArrayList<>();
 
     @ManyToMany
     @JoinTable(
@@ -39,12 +43,15 @@ public class Course {
     public Course() {
     }
 
-    public Course(String title, int duration, String description, List<Technology> technologies) {
-        this.title = title;
+    public Course(int duration, List<Technology> technologies, List<CourseTranslation> translations) {
         this.duration = duration;
-        this.description = description;
         this.technologies = technologies;
+        this.translations = translations;
     }
 
+    public void addTranslation(CourseTranslation translation) {
+        translation.setCourse(this);
+        translations.add(translation);
+    }
     // Getters y setters
 }
