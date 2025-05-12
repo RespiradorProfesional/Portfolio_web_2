@@ -3,6 +3,7 @@
 
 import { useState, useRef, useEffect, useMemo } from "react";
 import { usePathname, useRouter } from 'next/navigation';
+import { setLanguageCode } from "../utils/languageStore";
 
 
 type Language = {
@@ -26,7 +27,7 @@ const LanguageBox=() => {
   const [language, setLanguage] = useState<Language>({ code: "es", label: "Español" });
 
   const selectLanguage = (lang: Language) => {
-    setLanguage(lang); 
+    setLanguage(lang);
     const segments = pathname.split("/").filter(Boolean);
     segments[0] = lang.code;
     router.push("/" + segments.join("/"));
@@ -53,7 +54,7 @@ const LanguageBox=() => {
     if (foundLang && foundLang.code !== language.code) {
       setLanguage(foundLang);
     }
-  }, [language.code, pathname]);
+  }, [language.code, languages, pathname]);
 
 
   return (
