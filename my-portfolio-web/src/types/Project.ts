@@ -2,7 +2,7 @@ import { Technology } from "./Technology";
 
 
 export interface Project {
-    id?: number;
+    id: number;
     title: string;
     description: string;
     link: string;

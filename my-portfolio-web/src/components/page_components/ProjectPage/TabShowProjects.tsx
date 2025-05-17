@@ -40,7 +40,7 @@ export default function TabShowProjects({ projects }: { projects: Project[] }) {
         {/* Contenido de la pestaña activa */}
         <div className="flex flex-col w-full mx-auto">
           {(activeTab === "finished" ? projects_finished : projects_unfinished).map((project) => (
-             <LinkCard key={project.id} title={project.title} technologies={project.technologies} link={project.link}></LinkCard>
+             <LinkCard key={project.id} title={project.title} technologies={project.technologies} link={`/projects/${project.id}`}></LinkCard>
           ))}
         </div>
       </div>

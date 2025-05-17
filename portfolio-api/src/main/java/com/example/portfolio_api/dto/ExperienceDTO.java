@@ -12,6 +12,7 @@ public class ExperienceDTO {
     private Long id;
     private String title;
     private String description;
+    private String company;
     private int duration;
     private LocalDate creationDate;
     private List<String> technologies;

@@ -31,6 +31,8 @@ public class Experience {
     // Duration in months
     private int duration;
 
+    private String company;
+
     private LocalDate creationDate;
 
     @ManyToMany
@@ -47,8 +49,9 @@ public class Experience {
     public Experience() {
     }
 
-    public Experience(Long id,LocalDate creationDate, int duration,  List<Technology> technologies, List<ExperienceTranslation> translations) {
+    public Experience(Long id, String company, LocalDate creationDate, int duration,  List<Technology> technologies, List<ExperienceTranslation> translations) {
         this.id = id;
+        this.company = company;
         this.creationDate = creationDate;
         this.duration = duration;
         this.technologies = technologies;

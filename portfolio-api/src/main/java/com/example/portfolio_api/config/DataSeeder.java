@@ -83,19 +83,19 @@ public class DataSeeder {
 
             // Crear experiencias con traducciones
             List<Experience> experiences = new ArrayList<>();
-            experiences.add(createExperience(LocalDate.of(2022, 5, 1), 6,
+            experiences.add(createExperience(LocalDate.of(2022, 5, 1),"no one", 6,
                     technologies, "Desarrollo de APIs RESTful con Spring Boot para gestión de usuarios.",
                     "RESTful API development with Spring Boot for user management."));
 
-            experiences.add(createExperience(LocalDate.of(2023, 2, 15), 4,
+            experiences.add(createExperience(LocalDate.of(2023, 2, 15),"no one", 4,
                     technologies, "Participación en el desarrollo de un e-commerce completo usando React y Java.",
                     "Participated in full e-commerce development using React and Java."));
 
-            experiences.add(createExperience(LocalDate.of(2021, 10, 10), 8,
+            experiences.add(createExperience(LocalDate.of(2021, 10, 10),"no one", 8,
                     technologies, "Creación de microservicios para sistema bancario utilizando Spring Cloud y Docker.",
                     "Built microservices for banking system using Spring Cloud and Docker."));
 
-            experiences.add(createExperience(LocalDate.of(2023, 6, 1), 3,
+            experiences.add(createExperience(LocalDate.of(2023, 6, 1),"no one", 3,
                     technologies, "Mantenimiento y ampliación de funcionalidades en una plataforma educativa.",
                     "Maintained and expanded features on an educational platform."));
 
@@ -103,8 +103,9 @@ public class DataSeeder {
         };
     }
 
-    private Experience createExperience(LocalDate date, int duration, List<Technology> techs, String descEs, String descEn) {
+    private Experience createExperience(LocalDate date, String company, int duration, List<Technology> techs, String descEs, String descEn) {
         Experience exp = new Experience();
+        exp.setCompany(company);
         exp.setCreationDate(date);
         exp.setDuration(duration);
         exp.setTechnologies(techs);

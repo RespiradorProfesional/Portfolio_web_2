@@ -5,7 +5,6 @@ import TechnologyCard from "@/src/components/page_components/AboutPage/Technolog
 import { fetchCourses, fetchTechnologies } from "@/src/services/api";
 import LinkCard from "@/src/components/common/LinkCard";
 import { Course } from "@/src/types/Course";
-import ImageBackground from "@/src/components/common/ImageBackground";
 
 export default async function AboutPage() {
   const t = await getTranslations("AboutPage");
@@ -83,7 +82,7 @@ export default async function AboutPage() {
             key={course.id}
             title={course.title}
             technologies={course.technologies}
-            link={`/course/${course.id}`}
+            link={`/about/${course.id}`}
           />
         ))}
       </div>
