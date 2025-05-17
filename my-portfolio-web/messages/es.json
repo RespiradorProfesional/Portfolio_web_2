@@ -1,4 +1,12 @@
 {
+    "Common":{
+    "home" : "Inicio",
+    "about_me" : "Sobre mí",
+    "projects" : "Proyectos",
+    "experience" : "Experiencia",
+    "contact" : "Contacto",
+    "languages" : "Idiomas"
+  },
   "HomePage": {
     "title": "¡Bienvenido!",
     "about": "“Soy Néstor Álvarez, programador apasionado por la tecnología, el arte y la creatividad.”",
@@ -13,12 +21,14 @@
     "description_2": "En esta seccion encontrarás más detalles sobre mis proyectos y mi experiencia.",
     "titles_courses": "Títulos y cursos"
   },
-  "Common":{
-    "home" : "Inicio",
-    "about_me" : "Sobre mí",
-    "projects" : "Proyectos",
-    "experience" : "Experiencia",
-    "contact" : "Contacto",
-    "languages" : "Idiomas"
+  "ProjectPage":{
+    "description": "Aqui encontraras muchos proyectos en los cuales he participado o creado. Podras ver las tecnologías usadas en los mismos en incluso mas información de el dandole click al enlace",
+    "finished": "Terminados",
+    "unfinished": "Sin terminar"
+  },
+  "ContactPage":{
+    "send_email": "O envíame un correo a:",
+    "contact_me": "CONTÁCTAME"
   }
+
 }

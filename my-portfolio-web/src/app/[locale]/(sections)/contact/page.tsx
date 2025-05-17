@@ -6,12 +6,11 @@ import Link from "next/link";
 
 export default async function ContactPage() {
 
-  const t = await getTranslations("HomePage");
-  const tc = await getTranslations("Common");
+  const t = await getTranslations("ContactPage");
 
   return (
     <div className="w-full flex flex-col items-center justify-center mt-32 gap-8 px-4 text-center">
-      <h1 className="text-3xl font-bold text-main-text">Contáctame</h1>
+      <h1 className="text-3xl font-bold text-main-text">{t("contact_me")}</h1>
 
       <div className="flex flex-col items-center gap-6 bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
         <Link
@@ -46,7 +45,7 @@ export default async function ContactPage() {
           GitHub
         </Link>
 
-        <h3 className="text-gray-700">O envíame un correo a:</h3>
+        <h3 className="text-gray-700">{t("send_email")}</h3>
         <p className="text-gray-800 font-medium">nestorjobemail@gmail.com</p>
       </div>
     </div>

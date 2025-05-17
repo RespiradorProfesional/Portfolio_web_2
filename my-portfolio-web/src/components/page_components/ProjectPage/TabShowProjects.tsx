@@ -4,8 +4,8 @@ import { Project } from "@/src/types/Project";
 import { useState } from "react";
 import LinkCard from "../../common/LinkCard";
 
-export default function TabShowProjects({ projects }: { projects: Project[] }) {  
-    
+export default function TabShowProjects({ projects,title_finished, title_unfinished }: { projects: Project[],title_finished:string,title_unfinished:string }) {  
+
     const [activeTab, setActiveTab] = useState<"finished" | "unfinished">("finished");
 
     const projects_finished = projects.filter((project) => project.finished);
@@ -23,7 +23,7 @@ export default function TabShowProjects({ projects }: { projects: Project[] }) {
             }  cursor-pointer hover:border-b-2 hover:border-accent hover:text-accent`}
             onClick={() => setActiveTab("finished")}
           >
-            Terminados
+            {title_finished}
           </button>
           <button
             className={`px-4 py-2 ${
@@ -33,7 +33,7 @@ export default function TabShowProjects({ projects }: { projects: Project[] }) {
             }  cursor-pointer hover:border-b-2 hover:border-accent hover:text-accent `}
             onClick={() => setActiveTab("unfinished")}
           >
-            Sin terminar
+            {title_unfinished}
           </button>
         </div>
   

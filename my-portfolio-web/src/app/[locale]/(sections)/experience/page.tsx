@@ -6,9 +6,8 @@ import { getTranslations } from "next-intl/server";
 
 export default async function ExperiencePage () {
 
-    const t = await getTranslations("HomePage");
-    const tc = await getTranslations("Common");
-  
+    const t = await getTranslations("ContactPage");
+
     const experiences: Experience[] = await fetchExperiences();
 
   return (

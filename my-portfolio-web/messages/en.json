@@ -1,6 +1,33 @@
 {
+  "Common": {
+    "home": "Home",
+    "about_me": "About Me",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "languages": "Languages"
+  },
   "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "title": "Welcome!",
+    "about": "“I'm Néstor Álvarez, a programmer passionate about technology, art, and creativity.”",
+    "what_want": "What do you want to know?",
+    "about_desc": "Discover things about me, such as technical skills and completed degrees or courses",
+    "projects_desc": "Projects completed individually or as a team, either in progress or already finished",
+    "experience_desc": "View my professional experience",
+    "contact_desc": "Contact me through the form or social networks"
+  },
+  "AboutPage": {
+    "description": "Hi! I'm a developer passionate about creating web and mobile applications. I love learning new technologies and constantly improving my skills.",
+    "description_2": "In this section you'll find more details about my projects and experience.",
+    "titles_courses": "Degrees and Courses"
+  },
+  "ProjectPage": {
+    "description": "Here you'll find many projects I've participated in or created. You can see the technologies used and even more information by clicking the link",
+    "finished": "Finished",
+    "unfinished": "Unfinished"
+  },
+  "ContactPage": {
+    "send_email": "Or send me an email at:",
+    "contact_me": "CONTACT ME"
   }
 }

@@ -7,8 +7,7 @@ import { fetchProjects } from "@/src/services/api";
 import TabShowProjects from "@/src/components/page_components/ProjectPage/TabShowProjects";
 
 export default async function ProjectPage() {
-  const t = await getTranslations("HomePage");
-  const tc = await getTranslations("Common");
+  const t = await getTranslations("ProjectPage");
 
   const projects: Project[] = await fetchProjects();
 
@@ -24,13 +23,11 @@ export default async function ProjectPage() {
         />
         <div className="bg-background-2 pt-24 pb-10 w-full flex justify-center">
           <p className="max-w-[500]">
-            AAAA A AAAAA AAA AAA AAAA AAAAA AAAA AAAA AAAAAAAAAA AAAAAAAAAAAAAAA
-            AAAAAAAA AAAAAAAAAA AAAAA AAAAAAAAAA AAAAAAA AAAA AAAAAAA AAAAAAA
-            AAAAAAAAAA AAA AAA AAA
+            {t("description")}
           </p>
         </div>
         <div className="bg-gradient-to-t from-background-2 to-transparent h-48 w-full -scale-y-100" />
-        <TabShowProjects projects={projects}></TabShowProjects>
+        <TabShowProjects projects={projects} title_finished={t("finished")}  title_unfinished={t("unfinished")} />
       </div>
     </div>
   );
