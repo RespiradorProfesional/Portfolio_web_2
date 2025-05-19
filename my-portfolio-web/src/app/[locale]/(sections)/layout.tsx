@@ -2,7 +2,8 @@
 import Topbar from "@/src/components/common/Topbar";
 import React from "react";
 import {getTranslations} from 'next-intl/server';
-import { setLanguageCode } from "@/src/utils/languageStore";
+import ClientLanguageSetter from "@/src/components/common/ClientLanguageSetter";
+import ImageBackground from "@/src/components/common/ImageBackground";
 
 
 export default async function WithTopbarLayout({ children, params  }: { children: React.ReactNode, params: { locale: string } }) {
@@ -15,13 +16,13 @@ export default async function WithTopbarLayout({ children, params  }: { children
         { slug: "experience", title: tc("experience") },
         { slug: "contact", title: tc("contact") }
       ];
-    
-    setLanguageCode(params.locale)
 
   return (
     <div>
-      <Topbar links = {links} />
+      <ClientLanguageSetter params={params} />
       <main>
+        <Topbar links = {links} />
+        <ImageBackground />
         {children}</main>
     </div>
   );

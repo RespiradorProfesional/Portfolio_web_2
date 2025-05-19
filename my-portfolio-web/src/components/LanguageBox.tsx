@@ -3,7 +3,6 @@
 
 import { useState, useRef, useEffect, useMemo } from "react";
 import { usePathname, useRouter } from 'next/navigation';
-import { setLanguageCode } from "../utils/languageStore";
 
 
 type Language = {

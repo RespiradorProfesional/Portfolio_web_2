@@ -14,7 +14,7 @@ export default function TabShowProjects({ projects,title_finished, title_unfinis
     return (
       <div className="text-center w-full">
         {/* Barra de Tabs */}
-        <div className="flex justify-center space-x-4 my-10">
+        <div className="flex justify-center space-x-4 mb-10">
           <button
             className={`px-4 py-2 ${
               activeTab === "finished"

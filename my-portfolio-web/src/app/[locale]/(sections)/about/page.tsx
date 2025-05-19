@@ -5,6 +5,7 @@ import TechnologyCard from "@/src/components/page_components/AboutPage/Technolog
 import { fetchCourses, fetchTechnologies } from "@/src/services/api";
 import LinkCard from "@/src/components/common/LinkCard";
 import { Course } from "@/src/types/Course";
+import TransitionColor from "@/src/components/common/TransitionColor";
 
 export default async function AboutPage() {
   const t = await getTranslations("AboutPage");
@@ -30,13 +31,13 @@ export default async function AboutPage() {
   );
 
   return (
-    <div className="relative flex flex-col items-center ">
+    <div className="relative flex flex-col items-center">
       <div className="flex flex-col relative justify-center items-center w-full mt-40 pt-36 pb-28 z-10">
         <Image
           src="/personal_photos/personal_photo_example (2).jpeg"
           alt="Imagen de ejemplo"
-          width={40}
-          height={40}
+          width={200}
+          height={200}
           className="rounded-full w-40 h-40 absolute top-1"
         />
         <p className="max-w-3xl text-main-text bg-background-2 border-8 border-background-2 rounded-4xl p-4">
@@ -72,7 +73,7 @@ export default async function AboutPage() {
       </div>
       {/* Courses section */}
 
-      <div className="bg-gradient-to-t from-background-2 to-transparent h-48 w-full" />
+      <TransitionColor flip_v={false} />
       <div className="flex flex-col justify-center items-center bg-background-2 w-full">
         <h2 className="text-3xl md:text-5xl my-10 text-main-text">
           {t("titles_courses")}

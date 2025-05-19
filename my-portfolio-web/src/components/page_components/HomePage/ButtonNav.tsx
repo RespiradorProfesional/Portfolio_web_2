@@ -15,12 +15,13 @@ const ButtonNav = ({ slug, title, description }: ButtonNavProps) => {
   const fullPath = `/${currentLang}/${slug}`;
 
   return (
-    <div
-      className="group flex items-center h-44 max-w-3xl bg-background
+    <div className="group flex">
+      <Link
+        href={fullPath}
+        className=" h-44 bg-background min-w-7x1
                     transition-all duration-300 ease-in-out transform hover:text-accent hover:border-b-2 hover:border-accent md:hover:px-16 cursor-pointer"
-    >
-      <Link href={fullPath} className="hover:text-blue-500 transition-colors">
-        <h3 className="text-xl mb-5 text-center font-semibold text-second-text group-hover:text-accent">
+      >
+        <h3 className="mt-10 text-xl mb-5 text-center font-semibold text-second-text group-hover:text-accent">
           {title}
         </h3>
         <p className="text-second-text mx-10 group-hover:text-accent">

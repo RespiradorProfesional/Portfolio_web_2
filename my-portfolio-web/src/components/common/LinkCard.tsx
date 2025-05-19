@@ -1,10 +1,9 @@
-import { Technology } from "@/src/types/Technology";
 import TechnologiesIcons from "./TechnologiesIcons";
 import Link from "next/link";
 
 type LinkCardProps = {
   title: string;
-  technologies: Technology[];
+  technologies: string[];
   link: string;
 };
 

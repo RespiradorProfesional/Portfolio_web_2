@@ -1,10 +1,9 @@
-import { Technology } from "./Technology";
 
 export type Content = {
   id: number;
   title: string;
   description: string;
-  technologies: Technology[];
+  technologies: string[];
 
   // Opcionales o nullables según el tipo
   duration?: number | null;

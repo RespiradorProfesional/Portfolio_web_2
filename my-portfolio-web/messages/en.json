@@ -29,5 +29,16 @@
   "ContactPage": {
     "send_email": "Or send me an email at:",
     "contact_me": "CONTACT ME"
-  }
+  },
+  "ContentPage": {
+  "creation_date": "start date : ",
+  "duration": "duration : ",
+  "company": "company : ",
+  "link": "link",
+  "status": "status : ",
+  "finished": "finished",
+  "in_progress": "in progress",
+  "month" : "month",
+  "months" : "months"
+}
 }

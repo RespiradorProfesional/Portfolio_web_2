@@ -29,6 +29,17 @@
   "ContactPage":{
     "send_email": "O envíame un correo a:",
     "contact_me": "CONTÁCTAME"
+  },
+  "ContentPage":{
+    "creation_date": "fecha de comienzo : ",
+    "duration": "duración : ",
+    "company": "compañia : ",
+    "link": "enlace",
+    "status": "estado : ",
+    "finished": "finalizado",
+    "in_progress": "en proceso",
+    "month" : "mes",
+    "months" : "meses"
   }
 
 }

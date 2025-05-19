@@ -9,15 +9,19 @@ type ButtonTopBarProps = {
 
 const ButtonTopBar = ({ slug, title }: ButtonTopBarProps) => {
   const pathname = usePathname();
-  const currentLang = pathname.split("/")[1]; // extrae "es" o "en"
-
+  const currentLang = pathname.split("/")[1];
+  const currentSlug = pathname.split("/")[2]; 
   const fullPath = `/${currentLang}/${slug}`;
+
+  const isActive = slug === currentSlug;
 
   return (
     <div className="group">
       <Link
         href={fullPath}
-        className="mx-4 my-2 cursor-pointer text-center font-semibold text-main-text transition-colors duration-300 ease-in-out group-hover:text-accent"
+        className={`mx-4 my-2 cursor-pointer text-center font-semibold transition-colors duration-300 ease-in-out group-hover:text-accent ${
+          isActive ? "text-accent-2" : "text-main-text"
+        }`}
       >
         {title}
       </Link>
